@@ -8,12 +8,12 @@ int main()
 	Factory f;
 
 	{
-		auto x = f.create_class("Derived1");
+		auto x = f.make_object("Derived1");
 		if (x) std::cout << x->type();
 	}
 
 	{
-		auto x = f.create_class("Derived2");
+		auto x = f.make_object("Derived2");
 		if (x) std::cout << x->type();
 	}
 }
