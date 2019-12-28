@@ -4,5 +4,5 @@
 class Derived1 : public Base
 {
 public:
-	const std::string& type() const override;
+    const std::string &type() const override;
 };

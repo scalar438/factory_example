@@ -7,14 +7,13 @@
 
 #include <memory>
 
-template<class T> std::unique_ptr<Base> create_class(const std::string& type)
+template <class T> std::unique_ptr<Base> create_class(const std::string &type)
 {
 	if (Types<T>::type == type) return std::make_unique<T>();
 	return nullptr;
 }
 
-template<class ...Args>
-std::unique_ptr<Base> create_all(const std::string& type)
+template <class... Args> std::unique_ptr<Base> create_all(const std::string &type)
 {
 	for (auto func : {create_class<Args>...})
 	{
@@ -23,7 +22,7 @@ std::unique_ptr<Base> create_all(const std::string& type)
 	return nullptr;
 }
 
-std::unique_ptr<Base> Factory::create_class(const std::string& type)
+std::unique_ptr<Base> Factory::create_class(const std::string &type)
 {
 	return create_all<Derived1, Derived2>(type);
 }

@@ -5,5 +5,6 @@ class Base
 {
 public:
 	virtual ~Base() = default;
-	virtual const std::string& type() const = 0;
+
+	virtual const std::string &type() const = 0;
 };
