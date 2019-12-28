@@ -1,0 +1,48 @@
+AccessModifierOffset: -4
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: true
+# Must be true. Right now is false because "PointerAlignment: Right" does not work properly
+AlignConsecutiveDeclarations: false
+AlignEscapedNewlinesLeft: true
+AlignTrailingComments: true
+AllowShortIfStatementsOnASingleLine: true
+AllowShortBlocksOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: Inline
+
+
+BinPackArguments: true
+BinPackParameters: true
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: true
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterStruct: true
+  AfterExternBlock: true
+  IndentBraces: false
+  BeforeCatch: true
+  BeforeElse: true  
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+
+BreakBeforeTernaryOperators: false
+
+ColumnLimit: 100
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+ContinuationIndentWidth: 4
+Cpp11BracedListStyle: true
+FixNamespaceComments: true
+ForEachMacros: ['foreach', 'Q_FOREACH']
+IndentCaseLabels: false
+IndentWidth: 4
+Standard: Cpp11
+TabWidth: 4
+UseTab: ForIndentation
+MaxEmptyLinesToKeep: 2
+NamespaceIndentation: None
+PointerAlignment: Right
