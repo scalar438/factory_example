@@ -2,8 +2,7 @@
 
 #include "constants.hpp"
 
-#include "derived1.hpp"
-#include "derived2.hpp"
+#include "derived.hpp"
 
 #include <memory>
 
