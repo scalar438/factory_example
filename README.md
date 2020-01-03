@@ -19,4 +19,4 @@ if (type == derived_type2) return std::make_unique<Derived2>();
 // etc
 ```
 
-This way is error-prone because we have to provide matching between constant in condition, type that passed to make_unique, and value returned by the type() method. This repo suggests an other way - bind the constants to the type by template class and create object by the variadic template function.
+This way is error-prone because we have to provide matching between constant in condition, type that passed to make_unique, and value returned by the type() method. This repo suggests another way - bind the constants to the type by template class and create object by the variadic template function.
