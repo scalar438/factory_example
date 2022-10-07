@@ -1,9 +1,6 @@
 #include "factory.hpp"
-
 #include "constants.hpp"
-
 #include "derived.hpp"
-
 #include <memory>
 
 template <class T> std::unique_ptr<Base> make_one(const std::string &type)

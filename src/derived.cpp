@@ -8,6 +8,6 @@ const std::string &Derived1::type() const
 
 const std::string &Derived2::type() const
 {
-	// We cannot use Derived1 or any other class here by mistake.
+	// We cannot use neither Derived1 nor any other class here by mistake.
 	return Types<Derived2>::type;
 }
