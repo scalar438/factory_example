@@ -6,7 +6,7 @@ auto obj = factory.make_object("foo");
 if (obj) std::cout << obj->type(); // If the factory can create the object it is prints "foo"
 ```
 
-Naive solution contains ugly ifs like that:
+Naive solution that I met contained ugly ifs like that:
 ```
 // constants.h
 const static std::string derived_type1;
