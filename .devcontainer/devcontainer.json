@@ -1,32 +1,30 @@
-// For format details, see https://aka.ms/vscode-remote/devcontainer.json or the definition README at
-// https://github.com/microsoft/vscode-dev-containers/tree/master/containers/cpp
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
 	"name": "C++",
-	"dockerFile": "Dockerfile",
-	"runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
-
-	// Use 'settings' to set *default* container specific settings.json values on container create. 
-	// You can edit these settings after create using File > Preferences > Settings > Remote.
-	"settings": { 
-		"terminal.integrated.shell.linux": "/bin/bash"
+	"build": {
+		"dockerfile": "Dockerfile"
 	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools-extension-pack"
+			]
+		}
+	}
 
-	// Use 'appPort' to create a container with published ports. If the port isn't working, be sure
-	// your server accepts connections from all interfaces (0.0.0.0 or '*'), not just localhost.
-	// "appPort": [],
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
 
-	// Uncomment the next line to run commands after the container is created.
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "gcc -v",
 
-	// Uncomment the next line to have VS Code connect as an existing non-root user in the container. 
-	// On Linux, by default, the container user's UID/GID will be updated to match your local user. See
-	// https://aka.ms/vscode-remote/containers/non-root for details on adding a non-root user if none exist.
-	// "remoteUser": "vscode",
+	// Configure tool-specific properties.
+	// "customizations": {},
 
-	// Add the IDs of extensions you want installed when the container is created in the array below.
-	"extensions": [
-		"ms-vscode.cpptools",
-		"ms-vscode.cmake-tools",
-		"twxs.cmake"
-	]
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
 }
