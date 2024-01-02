@@ -1,7 +1,6 @@
 #include "constants.hpp"
 
 class Derived1;
-
 template <> const std::string Types<Derived1>::type = "Derived1";
 
 class Derived2;
