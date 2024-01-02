@@ -1,6 +1,3 @@
-add_subdirectory(main_program)
+add_library(factory_lib SHARED factory_lib.cpp)
 
-add_subdirectory(factory_lib)
-
-add_subdirectory(dyn_lib1)
-add_subdirectory(dyn_lib2)
+target_include_directories(factory_lib INTERFACE "include")
