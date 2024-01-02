@@ -5,7 +5,7 @@
 
 template <class Base, class FactoryType> class BasicFactory
 {
-	static_assert(std::is_base_of_v<FactoryBase<Base, FactoryType>, FactoryType>);
+	static_assert(std::is_base_of_v<BasicFactory<Base, FactoryType>, FactoryType>);
 
 public:
 	void register_factory(FactoryType *factory) { s_factories.insert(factory); }
