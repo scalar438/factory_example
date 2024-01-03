@@ -1,4 +1,4 @@
-add_library(factory_lib SHARED factory_lib.cpp)
+add_library(factory_lib SHARED src/factory_object_1.cpp src/factory_object_2.cpp)
 
 target_include_directories(factory_lib INTERFACE "include")
 

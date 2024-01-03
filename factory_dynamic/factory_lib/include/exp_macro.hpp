@@ -7,4 +7,5 @@
 	#define FACTORY_SPEC __declspec(dllimport)
 	#endif
 #else
+    #define FACTORY_SPEC
 #endif
