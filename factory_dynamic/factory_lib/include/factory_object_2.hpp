@@ -21,4 +21,7 @@ public:
 	~Object2Factory();
 
 	virtual std::unique_ptr<Object2> create_object(const std::string &object_type) = 0;
+
+	virtual std::unique_ptr<Object2> create_object(const std::string &object_type,
+	                                       const std::string &object_sub_type) =0;
 };

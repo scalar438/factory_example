@@ -1,1 +1,0 @@
-add_library(dyn_lib2 SHARED main.cpp)
