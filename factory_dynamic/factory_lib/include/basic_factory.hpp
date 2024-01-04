@@ -40,3 +40,11 @@ private:
 
 	static std::mutex s_mtx_factories;
 };
+
+#ifndef _MSC_VER
+template <class Base, class FactoryType>
+std::unordered_set<FactoryType *> BasicFactory<Base, FactoryType>::s_factories;
+
+template <class Base, class FactoryType>
+std::mutex BasicFactory<Base, FactoryType>::s_mtx_factories;
+#endif
