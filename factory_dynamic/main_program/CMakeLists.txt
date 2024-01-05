@@ -9,6 +9,10 @@ ENDIF(WIN32)
 
 add_executable(main_program ${main_program_sources})
 
+if (WIN32)
+    target_compile_definitions(main_program PRIVATE UNICODE)
+ENDIF(WIN32)
+
 target_link_libraries(main_program PRIVATE factory_lib)
 
 set_property(TARGET main_program PROPERTY CXX_STANDARD 20)
