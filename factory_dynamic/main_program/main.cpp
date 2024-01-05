@@ -4,5 +4,7 @@
 int main()
 {
 	auto ptr = Object1Factory::create("None");
-//	if (ptr) std::cout << "Fail\n";
+	if (ptr) std::cout << "Fail\n";
+	
+
 }

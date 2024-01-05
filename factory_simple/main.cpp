@@ -9,11 +9,11 @@ int main()
 
 	{
 		auto x = f.make_object("Derived1");
-		if (x) std::cout << x->type();
+		if (x) std::cout << x->type() << '\n';
 	}
 
 	{
 		auto x = f.make_object("Derived2");
-		if (x) std::cout << x->type();
+		if (x) std::cout << x->type() << '\n';
 	}
 }
