@@ -7,10 +7,11 @@ struct Plugin::Pimpl
 	void *handle;
 };
 
-Plugin::Plugin(std::filesystem::path dll_name) : pimpl(std::make_unique<Pimpl>())
+Plugin::Plugin(const std::string &dll_name) : pimpl(std::make_unique<Pimpl>())
 {
-	auto handle = dlopen(dll_name.c_str(), RTLD_NOW);
-	if (!handle) throw PluginLoadException(dll_name.generic_string());
+	std::filesystem::path dll_path = "./lib" + dll_name + ".so";
+	auto handle                    = dlopen(dll_path.c_str(), RTLD_NOW);
+	if (!handle) throw PluginLoadException(dll_path.generic_string());
 	pimpl->handle = handle;
 }
 

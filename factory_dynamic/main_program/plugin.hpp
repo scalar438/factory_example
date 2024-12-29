@@ -4,7 +4,7 @@
 #include <filesystem>
 #include <memory>
 
-class PluginLoadException : std::runtime_error
+class PluginLoadException : public std::runtime_error
 {
 public:
 	PluginLoadException(std::string plugin_name)
@@ -15,7 +15,7 @@ public:
 class Plugin
 {
 public:
-	Plugin(std::filesystem::path dll_name);
+	Plugin(const std::string &dll_name);
 	~Plugin();
 
 private:
