@@ -6,9 +6,9 @@ AlignConsecutiveDeclarations: false
 AlignEscapedNewlinesLeft: true
 AlignTrailingComments: true
 AllowShortIfStatementsOnASingleLine: true
-AllowShortBlocksOnASingleLine: false
+AllowShortBlocksOnASingleLine: Empty
 AllowShortCaseLabelsOnASingleLine: true
-AllowShortFunctionsOnASingleLine: Inline
+AllowShortFunctionsOnASingleLine: Empty
 
 
 BinPackArguments: true

@@ -50,6 +50,7 @@ echo "${TMP_DIR}"
 cd "${TMP_DIR}"
 
 curl -sSL "https://github.com/Kitware/CMake/releases/download/v${CMAKE_VERSION}/${CMAKE_BINARY_NAME}" -O
+echo "https://github.com/Kitware/CMake/releases/download/v${CMAKE_VERSION}/${CMAKE_CHECKSUM_NAME}"
 curl -sSL "https://github.com/Kitware/CMake/releases/download/v${CMAKE_VERSION}/${CMAKE_CHECKSUM_NAME}" -O
 
 sha256sum -c --ignore-missing "${CMAKE_CHECKSUM_NAME}"
