@@ -1,4 +1,5 @@
 build/*
 .vscode/settings.json
+.vscode/launch.json
 .vs/*
 out/*
