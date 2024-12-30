@@ -4,6 +4,4 @@ add_library(dyn_lib SHARED
 
 target_link_libraries(dyn_lib PUBLIC factory_lib)
 
-set_property(TARGET dyn_lib PROPERTY RUNTIME_OUTPUT_DIRECTORY "../main_program")
-
 set_property(TARGET dyn_lib PROPERTY CXX_STANDARD 20)
