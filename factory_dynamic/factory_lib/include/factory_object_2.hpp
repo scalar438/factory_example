@@ -4,6 +4,8 @@
 #include <memory>
 #include <string>
 
+// The same as for Object1 and it's factory class
+
 class Object2
 {
 public:
@@ -20,6 +22,7 @@ public:
 	Object2Factory();
 	~Object2Factory();
 
+	// If we have several ways to create the object, declare all possible methods here
 	virtual std::unique_ptr<Object2> create_object(const std::string &object_type) = 0;
 
 	virtual std::unique_ptr<Object2> create_object(const std::string &object_type,

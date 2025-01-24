@@ -12,6 +12,7 @@ public:
 	{}
 };
 
+// A RAII wrapper for loading/unloading dynamic libraries
 class Plugin
 {
 public:

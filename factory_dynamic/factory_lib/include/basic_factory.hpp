@@ -5,10 +5,11 @@
 #include <type_traits>
 #include <unordered_set>
 
+// The class contains the basis code for every factory
+// It shouldn't be used by the end user (i.e plugin's author) directly. 
+// It's supposed to be used only if you want to declare a new factory for the new object type
 template <class Base, class FactoryType> class FACTORY_SPEC BasicFactory
 {
-	// static_assert(std::is_base_of_v<BasicFactory<Base, FactoryType>, FactoryType>);
-
 public:
 	template <class... Args> static std::unique_ptr<Base> create(Args... args)
 	{
